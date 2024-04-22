@@ -65,12 +65,8 @@ class Television:
         Returns:
             str: Power = [status], Channel = [channel], Volume = [volume]
         '''
-        is_on = self.__status
-        chan = self.__channel
-        
         if self.__muted == True:
-            vol = 0
+            return f'Power = {self.__status}, Channel = {self.__channel}, Volume = {Television.MIN_VOLUME}'
         else:
-            vol = self.__volume
+            return f'Power = {self.__status}, Channel = {self.__channel}, Volume = {self.__volume}'
 
-        return f'Power = {is_on}, Channel = {chan}, Volume = {vol}'
